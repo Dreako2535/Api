@@ -18,3 +18,5 @@ app.get('/',(req,res)=>res.send('estamos en el servidor de mi API'))
 const server=app.listen(process.env.PORT || 8000,()=>{
     console.log('estas en marcha')
 })
+
+export default app;
