@@ -27,10 +27,10 @@ export default class infoController{
     static async store(req, res){
         let conexion
         try {
-            const{nombre, descripcion,img,color}=req.body
+            const {nombre, descripcion, img, color}=req.body
             conexion= await mysql.createConnection(db)
-            const [enviar]= await conexion.execute("INSERT INTO formulario (nombre,descripcion,img,color) VALUES (?,?,?,?)",
-                [nombre, descripcion,img,color])
+            const [enviar]= await conexion.execute("INSERT INTO formulario (nombre, descripcion, img, color) VALUES (?,?,?,?)",
+                [nombre, descripcion, img, color])
             console.log(enviar)
             
         }
